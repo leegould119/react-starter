@@ -1,69 +1,87 @@
-#  Setting up your project for react
+# Setting up your project for react
 
-## Initialise npm
-- open the console
-- type [npm init -y]
-- this will generate a package.json file
+## Initialise project
 
-## Install webpack and webpack cli 
+- type npm install
+- you already have the package.json file
 
-- type [npm install webpack webpack-cli --save-dev]
+# project structure
 
-### Create the following file structure 
+this is a starter package for react.js
+take a monent to look at the package.json file and you'll see a bunch of dependencies installed.
 
-- root of the project 
-- |- index.html
-- |- / src
--    |-index.js
+if you want to know more visit.
 
+- for webpack and the dependancies installed
+  - https://webpack.js.org/
+- for react.js
 
-## Webpack dev server 
+  - https://reactjs.org/
 
-- npm install webpack-dev-server
+## styles
 
-## React and react dom 
+- this project is configured to work with sass and css
+  - /src/css/
+  - /src/sass/
+  - feel free to delete all the styles in /sass/ except for main.scss
+  - this is linked in app.js
+  - app.js is found in /src/components/App.js
 
-- npm install react react-dom
+## main file structure (root files required)
 
-## Install core and Javscript loaders
+- the main entry for this project is
 
-- npm install --save-dev @babel/core babel-loader @babel/preset-env @babel/preset-react
+  - /src/index.js
 
-  - Babel is a third party library that is used to convert ECMAScript 2015+ code into a backward-compatible version of JavaScript in current and older browsers or environments.
+  - this in turn renders out content to
 
-  - babel/core: The core babel library
-  - babel/preset-env: Is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s)This is also known as browser polyfills
-  - babel/preset-react: Transform React JSX into regular JavaScript code
-  - babel-loader: Webpack loader helper
+    - /src/index.html
 
-## Install CSS loaders
+    - there is a container ["div id="app"] which is accessed by index.js
 
-- npm install --save-dev css-loader style-loader postcss-loader --save-dev
+    - next app.js is the main file which is referenced by index.js
 
-  - CSS-loader: Handle CSS files
-  - style-loader: The style-loader takes CSS and actually inserts it into the page so that the styles are active on the page.
-  - postcss-loader: Will process CSS to work on older browsers
+    - pages/
+      - this is where pages are created there are some exampels home.js and page2.js
 
+- favicon.ico is required for the project to run feel free to make your own version of this file.
 
+- .gitignore
 
-## Install Image loaders
-- npm install --save-dev file-loader url-loader
+  - this file is used to exclude the dependencies installed in [node-modules] when pushing this file to the git repo
 
- - URL-loader: Will load the image files. Url loader depends on file-loader
+- readme.md
 
-## Install Plugins
+  - that is this file giving the basics of what this project includes
 
--npm install --save-dev autoprefixer
- - autoprefixer: Autoprefixer is a PostCSS plugin which parses your CSS and adds vendor prefixes
- 
--npm install --save-dev html-webpack-plugin
- - HTML-webpack-plugin: The HtmlWebpackPlugin simplifies the creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation.
+- prettierrc.json
 
+  - this is a configuration file for prettier
+  - read more here https://prettier.io/docs/en/configuration.html
 
- # Create a webpack.config.js in the root folder
-- entry: webpack will start from index.js as the entry point
-- output: all files will be bundled into a file called  bundle.js and copied to /dist folder
-- resolve: webpack will resolve to .js and .jsx extensions
-- module: this are the loader rules that will be considered. For js files, webpack should use the babel-loader. For css, use style-loader with css-loader and postcss-loader. Finally for images, use the url-loader.
-- plugins: use the HtmlWebpackPlugin with index.html to inject the body
+- .babelrc
 
+  - configuration file for babel
+  - read more here https://babeljs.io/docs/en/config-files#file-relative-configuration
+
+- webpack.config.js
+  - webpack configuration file needed to run and compile this project
+  - read more here https://webpack.js.org/configuration/
+
+# scrpits
+
+### youll find scripts in the panel [npm scripts]
+
+- the scripts are prepared in package.json
+- [this file was created with the command npm init -y]
+
+- check scripts
+  - used to cherck your scripts and see waht is being used
+- update scripts
+  - used to update the scripts [there is a warning if you might break your code]
+- start
+  - starts the local server with hot reloading
+- build
+  - react.js has 2 modes [ development and production ] it relies on webpack to bundle the files into a compiled site
+  - the build command will compile a production [reacy to deploy site]
+  - the start command will start up a local server for you to develop your website on.

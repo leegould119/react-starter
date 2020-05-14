@@ -1,29 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import { Router, Route, Switch } from "react-router-dom";
 
 import history from "./common/history";
-// import files 
+// import files
 import Navigation from "./common/nagivation";
 import Home from "../pages/Home";
 import Page2 from "../pages/Page2";
 
-import "../sass/simple-grid.scss";
+// main styles
 import "../sass/main.scss";
 export default class componentName extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <Router history={history}>
-                    <Navigation />
+  render() {
+    return (
+      <React.Fragment>
+        <Router history={history}>
+          <Navigation />
 
-                    <Switch>
-                        <Route exact path="/" render={props => <Home {...props} />} />
-                        <Route path="/page-two" render={props => <Page2 {...props} />} />
-                    </Switch>
-
-                </Router>
-            </React.Fragment>
-
-        )
-    }
+          <Switch>
+            <Route exact path="/" render={(props) => <Home {...props} />} />
+            <Route path="/page-two" render={(props) => <Page2 {...props} />} />
+          </Switch>
+        </Router>
+      </React.Fragment>
+    );
+  }
 }

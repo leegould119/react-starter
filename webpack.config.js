@@ -32,8 +32,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.s[ac]ss$/i,
-        // test: /\.less$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader" },
