@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "bannerUrl": "/src/img/banners/summer-sunset.jpg",
+    "title": "Summer sunset",
+    "description": "Do nulla ea ad fugiat labore Lorem anim in incididunt nisi minim in."
+  },
+  {
+    "id": 2,
+    "bannerUrl": "/src/img/banners/country-road.sunset.jpg",
+    "title": "Summer sunset",
+    "description": "Do nulla ea ad fugiat labore Lorem anim in incididunt nisi minim in."
+  },
+  {
+    "id": 3,
+    "bannerUrl": "/src/img/banners/mountains.jpg",
+    "title": "Summer sunset",
+    "description": "Do nulla ea ad fugiat labore Lorem anim in incididunt nisi minim in."
+  }
+]

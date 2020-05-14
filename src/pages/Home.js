@@ -4,6 +4,23 @@ class homePage extends Component {
   render() {
     return (
       <React.Fragment>
+        <section className="bg2">
+          <div
+            className="container"
+            style={{ color: "#ffffff", paddingTop: "50px" }}
+          >
+            <div className="row">
+              <div className="col-12">
+                <h1>new section</h1>
+                <p>
+                  Sunt tempor voluptate Lorem nulla ut. Proident dolor officia
+                  id culpa proident est laboris ex pariatur sunt aute cillum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="white">
           <div className="container">
             <div className="row">
@@ -97,6 +114,23 @@ class homePage extends Component {
                   quis ut.
                 </p>
                 <a className="button grey-btn">read more</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg2">
+          <div
+            className="container"
+            style={{ color: "#ffffff", paddingTop: "50px" }}
+          >
+            <div className="row">
+              <div className="col-12">
+                <h1>new section</h1>
+                <p>
+                  Sunt tempor voluptate Lorem nulla ut. Proident dolor officia
+                  id culpa proident est laboris ex pariatur sunt aute cillum.
+                </p>
               </div>
             </div>
           </div>

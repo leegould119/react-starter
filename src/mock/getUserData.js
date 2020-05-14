@@ -1,5 +1,5 @@
 import axios from "axios";
-var customData = require("./mock-data.json");
+
 const getUserData = async function () {
   const headers = {
     "Content-Type": "application/json",
@@ -11,7 +11,7 @@ const getUserData = async function () {
   });
   return await axios({
     method: "get",
-    url: "/src/mock/mock-data.json",
+    url: "/src/mock/banners.json",
     headers: headers
   })
     .then(function (response) {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import getCustomerData from "../mock/getData";
+import getUserData from "../mock/getUserData";
 class pageTwo extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ class pageTwo extends Component {
     this.getRecords();
   };
   getRecords = async () => {
-    await getCustomerData().then(
+    await getUserData().then(
       function (response) {
         // console.log("resp: ==>" + JSON.stringify(response, null, "\t"));
         this.setState({ users: response.data });
@@ -30,20 +30,166 @@ class pageTwo extends Component {
     const list = users.map(function (user, index) {
       return (
         <React.Fragment key={index}>
-          <div>
-            <img src={user.avatar} title="avatar" />
-            <p>name : {user.first_name + " " + user.last_name}</p>
-            <a href={"mailto:" + user.email}>{user.email}</a>
-            <p>gender: {user.gender}</p>
-            <p>ip adresss : {user.ip_address}</p>
+          <div
+            style={{
+              backgroundImage: "url(" + user.bannerUrl + ")",
+              width: "100%",
+              height: "300px",
+              backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundAttachment: "fixed"
+            }}
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <h1
+                    style={{
+                      color: "#ffffff",
+                      textAlign: "center",
+                      marginTop: "80px"
+                    }}
+                  >
+                    {user.title}
+                  </h1>
+                  <h3 style={{ color: "#ffffff", textAlign: "center" }}>
+                    {user.description}
+                  </h3>
+                </div>
+              </div>
+            </div>
           </div>
         </React.Fragment>
       );
     });
     return (
       <div>
-        <h1>page 2</h1>
-        {list}
+        <section className="bg1">
+          <div
+            className="container"
+            style={{ color: "#ffffff", paddingTop: "50px" }}
+          >
+            <div className="row">
+              <div className="col-12">
+                <h1>nerw section</h1>
+                <p>
+                  Sunt tempor voluptate Lorem nulla ut. Proident dolor officia
+                  id culpa proident est laboris ex pariatur sunt aute cillum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="white">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <h1> new section</h1>
+                <p>
+                  Dolore cillum minim deserunt laborum excepteur deserunt enim
+                  ut consequat cupidatat laboris do. Occaecat est incididunt
+                  elit eu velit officia consectetur anim aliqua adipisicing
+                  nostrud. Dolor quis ea nisi nulla excepteur sit incididunt
+                  officia laboris. Esse aliqua adipisicing anim adipisicing
+                  labore ea laborum est ipsum fugiat id exercitation quis ea.
+                  Nisi ipsum et sunt dolore sit eu ipsum ad cillum nostrud culpa
+                  culpa elit. Lorem tempor veniam et consectetur commodo eu
+                  nostrud sit mollit nostrud ipsum in ullamco. Cupidatat amet
+                  elit ex in. Culpa elit elit incididunt ad duis minim
+                  consectetur id fugiat. Incididunt velit incididunt et est
+                  aliquip sunt cupidatat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="dark-grey">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <h1> new section</h1>
+              </div>
+              <div className="col-6">
+                <h2> more about</h2>
+                <p>
+                  Dolore cillum minim deserunt laborum excepteur deserunt enim
+                  ut consequat cupidatat laboris do. Occaecat est incididunt
+                  elit eu velit officia consectetur anim aliqua adipisicing
+                  nostrud. Dolor quis ea nisi nulla excepteur sit incididunt
+                  officia laboris. Esse aliqua adipisicing anim adipisicing
+                  labore ea laborum est ipsum fugiat id exercitation quis ea.
+                  Nisi ipsum et sunt dolore sit eu ipsum ad cillum nostrud culpa
+                  culpa elit. Lorem tempor veniam et consectetur commodo eu
+                  nostrud sit mollit nostrud ipsum in ullamco. Cupidatat amet
+                  elit ex in. Culpa elit elit incididunt ad duis minim
+                  consectetur id fugiat. Incididunt velit incididunt et est
+                  aliquip sunt cupidatat.
+                </p>
+              </div>
+              <div className="col-6">
+                <h2> more about</h2>
+                <p>
+                  Dolore cillum minim deserunt laborum excepteur deserunt enim
+                  ut consequat cupidatat laboris do. Occaecat est incididunt
+                  elit eu velit officia consectetur anim aliqua adipisicing
+                  nostrud. Dolor quis ea nisi nulla excepteur sit incididunt
+                  officia laboris. Esse aliqua adipisicing anim adipisicing
+                  labore ea laborum est ipsum fugiat id exercitation quis ea.
+                  Nisi ipsum et sunt dolore sit eu ipsum ad cillum nostrud culpa
+                  culpa elit. Lorem tempor veniam et consectetur commodo eu
+                  nostrud sit mollit nostrud ipsum in ullamco. Cupidatat amet
+                  elit ex in. Culpa elit elit incididunt ad duis minim
+                  consectetur id fugiat. Incididunt velit incididunt et est
+                  aliquip sunt cupidatat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg1">
+          <div
+            className="container"
+            style={{ color: "#ffffff", paddingTop: "50px" }}
+          >
+            <div className="row">
+              <div className="col-12">
+                <h1>new section</h1>
+                <p>
+                  Sunt tempor voluptate Lorem nulla ut. Proident dolor officia
+                  id culpa proident est laboris ex pariatur sunt aute cillum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="light-orange">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <h1> new section</h1>
+                <p>
+                  Dolore cillum minim deserunt laborum excepteur deserunt enim
+                  ut consequat cupidatat laboris do. Occaecat est incididunt
+                  elit eu velit officia consectetur anim aliqua adipisicing
+                  nostrud. Dolor quis ea nisi nulla excepteur sit incididunt
+                  officia laboris. Esse aliqua adipisicing anim adipisicing
+                  labore ea laborum est ipsum fugiat id exercitation quis ea.
+                  Nisi ipsum et sunt dolore sit eu ipsum ad cillum nostrud culpa
+                  culpa elit. Lorem tempor veniam et consectetur commodo eu
+                  nostrud sit mollit nostrud ipsum in ullamco. Cupidatat amet
+                  elit ex in. Culpa elit elit incididunt ad duis minim
+                  consectetur id fugiat. Incididunt velit incididunt et est
+                  aliquip sunt cupidatat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }
