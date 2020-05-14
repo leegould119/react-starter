@@ -1,0 +1,256 @@
+//AUTRHOR: LEE GOULD
+//MAIN SCSS FILE
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto:wght@300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+/*------------------------------------------------------------------------------------
+    GLOBAL TYPOGRAPHY STYLES 
+    google fonts and weights
+--------------------------------------------------------------------------------------*/
+
+// fonts
+$roboto: "Roboto", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+$roboto-condensed: "Roboto Condensed", sans-serif;
+
+// font weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+/*------------------------------------------------------------------------------------
+    GLOBAL COLORS
+--------------------------------------------------------------------------------------*/
+
+// MAIN THEME COLORS
+$light-orange: rgba(191, 155, 48, 1);
+$dark-orange: rgba(171, 125, 18, 1);
+$dark-grey: rgba(54, 54, 55, 1);
+$light-grey: rgba(240, 240, 240, 1);
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$grey: #333;
+
+/*------------------------------------------------------------------------------------
+    GLOBAL TYPOGRAPHY STYLES 
+        checkout https://type-scale.com/ STARTING SCALE FOR THE FONTS
+--------------------------------------------------------------------------------------*/
+// font-size: 14px;
+html {
+  font-size: 87.5%;
+}
+body {
+  background-color: $white;
+  font-family: $open-sans;
+  font-weight: $regular;
+  color: $grey;
+  line-height: 1.65em;
+  border: 0px;
+  margin: 0px;
+}
+p {
+  margin-bottom: 1.15rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: $roboto-condensed;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.802em;
+  text-transform: uppercase;
+  font-weight: $bold;
+}
+
+h2 {
+  font-size: 1.502em;
+  text-transform: capitalize;
+  font-weight: $medium;
+}
+
+h3 {
+  font-size: 1.424em;
+}
+
+h4 {
+  font-size: 1.266em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+small,
+.text_small {
+  font-size: 0.889em;
+}
+
+.header {
+  background-color: $dark-grey;
+  height: 40px;
+  overflow: hidden;
+}
+.header nav {
+  margin-top: 10px;
+}
+.header a {
+  color: $white;
+  text-decoration: none;
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+  font-weight: $light;
+  padding: 0px 0px 10px 10px;
+}
+
+// utility
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------
+    THEMING
+--------------------------------------------------------------------------------------------------------------- */
+
+// background container colors
+
+// corsor styles
+$pointer: pointer;
+
+// padding
+$default-padding: 5px;
+$padding-10px: 10px;
+
+// button widths
+$button-width1: 100px;
+$button-width2: 120px;
+
+// corner raduis
+$corners-3px: 3px;
+$corners-5px: 5px;
+
+// mixins
+@mixin align-center {
+  margin: 10px auto 20px;
+}
+@mixin padding-top {
+  padding-top: 40px;
+}
+@mixin padding-bottom {
+  padding-bottom: 40px;
+}
+.light-orange {
+  @include padding-top;
+  @include padding-bottom;
+  background-color: $light-orange;
+  color: $white;
+}
+.dark-grey {
+  @include padding-top;
+  @include padding-bottom;
+  background-color: $dark-grey;
+  color: $white;
+}
+.white {
+  @include padding-top;
+  @include padding-bottom;
+  background-color: $white;
+  color: $grey;
+}
+
+.button {
+  width: $button-width1;
+  font-family: $roboto-condensed;
+  font-size: 1em;
+  display: block;
+  text-align: center;
+}
+.orange-btn {
+  @include align-center;
+  background-color: $dark-orange;
+  color: $white;
+  cursor: $pointer;
+  padding: $default-padding;
+  border-radius: $corners-3px;
+}
+
+.orange-btn:hover {
+  background-color: $dark-grey;
+}
+
+.grey-btn {
+  @include align-center;
+  background-color: $light-orange;
+  color: $white;
+  cursor: $pointer;
+  padding: $default-padding;
+  background-color: $dark-grey;
+  border-radius: $corners-3px;
+}
+.grey-btn:hover {
+  background-color: $dark-orange;
+}
+
+/*-----------------------------------------------------------------------------------------------
+ICONS
+-------------------------------------------------------------------------------------------------*/
+.design-icon {
+  background-image: url(../img/design-white.svg);
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 42px;
+  display: block;
+  margin: 18px auto;
+}
+
+.coding-icon {
+  background-image: url(../img/coding-white.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 30px;
+  display: block;
+  margin: 29px auto;
+}
+
+.ux-design-icon {
+  background-image: url(../img/ux-design-white.svg);
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 37px;
+  display: block;
+  margin: 20px auto;
+}
+
+.architecture-icon {
+  background-image: url(../img/arch-white.svg);
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 31px;
+  display: block;
+  margin: 27px auto;
+}

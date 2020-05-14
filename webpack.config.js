@@ -27,14 +27,32 @@ module.exports = {
                 use: [
                     {
                         loader: "html-loader",
+
                         options: { minimize: true }
+                    },
+
+                ]
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                // test: /\.less$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('sass'),
+                        },
                     }
+
                 ]
             },
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader"]
             },
+
             {
                 test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
                 loader: "file-loader"

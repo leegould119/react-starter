@@ -6,6 +6,9 @@ import history from "./common/history";
 import Navigation from "./common/nagivation";
 import Home from "../pages/Home";
 import Page2 from "../pages/Page2";
+
+import "../sass/simple-grid.scss";
+import "../sass/main.scss";
 export default class componentName extends Component {
     render() {
         return (
