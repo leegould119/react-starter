@@ -72,7 +72,7 @@ class pageTwo extends Component {
           >
             <div className="row">
               <div className="col-12">
-                <h1>nerw section</h1>
+                <h1>new section</h1>
                 <p>
                   Sunt tempor voluptate Lorem nulla ut. Proident dolor officia
                   id culpa proident est laboris ex pariatur sunt aute cillum.

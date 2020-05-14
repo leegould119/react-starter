@@ -82,7 +82,7 @@ class homePage extends Component {
               <div className="col-3">
                 <span className="design-icon" />
                 <h2 className="center">design</h2>
-                <p>
+                <p className="center">
                   Irure eu culpa elit nostrud aute commodo voluptate enim veniam
                   quis ut.
                 </p>
@@ -91,25 +91,25 @@ class homePage extends Component {
               <div className="col-3">
                 <span className="coding-icon" />
                 <h2 className="center">coding</h2>
-                <p>
+                <p className="center">
                   Irure eu culpa elit nostrud aute commodo voluptate enim veniam
                   quis ut.
                 </p>
                 <a className="button grey-btn">read more</a>
               </div>
-              <div className="col-3 ">
+              <div className="col-3">
                 <span className="ux-design-icon" />
                 <h2 className="center">UX design</h2>
-                <p>
+                <p className="center">
                   Irure eu culpa elit nostrud aute commodo voluptate enim veniam
                   quis ut.
                 </p>
                 <a className="button grey-btn">read more</a>
               </div>
-              <div className="col-3 ">
+              <div className="col-3">
                 <span className="architecture-icon" />
                 <h2 className="center">architecture</h2>
-                <p>
+                <p className="center">
                   Irure eu culpa elit nostrud aute commodo voluptate enim veniam
                   quis ut.
                 </p>

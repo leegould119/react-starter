@@ -43,7 +43,6 @@ $corners-5px: 5px;
   }
   .grey-btn {
     @include align-center;
-    background-color: $light-orange;
     color: $white;
     cursor: $pointer;
     padding: $default-padding;
